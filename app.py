@@ -638,7 +638,7 @@ st.markdown("""
 # HTML para el encabezado
 st.markdown("""
     <div class="header">
-        <img src="https://epiverse-trace.github.io/blueprints/logo_white.svg" alt="Logo izquierdo">
+        
         
          
     </div>
