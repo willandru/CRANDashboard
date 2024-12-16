@@ -607,51 +607,6 @@ st.set_page_config(
 
 
 
-#ENCABEZADO--------------------------------------------------------------------------------------------------------------
-
-# Encabezado simple
-#st.write("## TÍTULO")
-
-# CSS para el encabezado con franja de color
-st.markdown("""
-    <style>
-    .header {
-        background-color: #21303C; /* Cambia el color de fondo aquí */
-        padding: 20px; /* Espaciado interno */
-        border-radius: 8px; /* Bordes redondeados opcionales */
-        display: flex; /* Para alinear texto e imágenes en la misma fila */
-        align-items: center; /* Centrar contenido verticalmente */
-        justify-content: space-between; /* Distribuir contenido horizontalmente */
-        color: white; /* Color del texto */
-    }
-    .header img {
-        height: 50px; /* Altura de las imágenes */
-        margin-right: 15px; /* Espaciado entre imágenes y texto */
-    }
-    .header h1 {
-        font-size: 24px; /* Tamaño del texto */
-        margin: 0; /* Elimina el margen por defecto */
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-# HTML para el encabezado
-st.markdown("""
-    <div class="header">
-        
-        
-         
-    </div>
-""", unsafe_allow_html=True)
-
-
-#####  FIN ENCABEZADO ----------------------------------------------------------------------------------------
-
-
-
-
-
-
 
 
 
@@ -749,7 +704,7 @@ st.markdown("""
 
 
 # Entrada de paquetes con estilo centrado y ancho reducido
-input_packages = st.text_input("", "vaccineff, sivirep, serofoi", placeholder="Buscar paquetes...")
+input_packages = st.text_input("", "ColOpenData, sivirep", placeholder="Buscar paquetes...")
 # Procesar paquetes
 packages = list(dict.fromkeys(pkg.strip() for pkg in input_packages.split(",") if pkg.strip()))
 
@@ -784,7 +739,7 @@ with st.container():
     with col1:
         # Selección de fechas
         st.markdown("<h3 style=' font-size:24px; font-weight: bold;'>Selección de fechas</h3>",unsafe_allow_html=True)
-        start_date = st.date_input("Fecha de Inicio", value=datetime(2024, 11, 13))
+        start_date = st.date_input("Fecha de Inicio", value=datetime(2024, 11, 1))
         end_date = st.date_input("Fecha de Fin", value=datetime(2024, 12, 13))
 
         ## VERTICAL SPACE
